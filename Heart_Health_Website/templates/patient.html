@@ -12,16 +12,16 @@
 
     <section class="navbar">
 
-        <img src="{{ url_for('static', filename='/images/heart stroke.jpg') }}" alt="">
+        <img src="images/heart stroke.jpg" alt="">
 
         <h1>Heart Strokes</h1>
 
         <div class="nav-links">
             <li><a class="navlink" href="">Heart Stroke Information</a></li>
-            <li><a class="navlink" id="pat-info"  href="patient">Patient Information</a></li>
-            <li><a class="navlink" id="logs"  href="logs">Daily Logs & Progress</a></li>
-            <li><a class="navlink"  href="statistics">Statistics</a></li>
-            <li><a class="navlink"  href="">Resources</a></li>
+            <li><a class="navlink" id="pat-info"  href="patient.html">Patient Information</a></li>
+            <li><a class="navlink" id="logs"  href="logs.html">Daily Logs & Progress</a></li>
+            <li><a class="navlink"  href="statistics.html">Statistics</a></li>
+            <li><a class="navlink"  href="resources.html">Resources</a></li>
         </div>
         
     </section>
@@ -32,7 +32,7 @@
             <h1>Patient Information</h1>
             
             <div class="form-container">
-                <form class = "form" action="form">
+                <form class = "form" action="patient" method="POST">
 
                     <div class="left side">
         
@@ -88,9 +88,10 @@
                             <input type="text" id="disease" name="disease">
                         </li>
                     </div>
-                    
+                    <button>Submit</button>
                 </form>
 
+                
 
             </div>
        </div>

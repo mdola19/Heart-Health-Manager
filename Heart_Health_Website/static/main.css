@@ -277,6 +277,29 @@ section.patient .patient-container .form-container .form .right {
   margin-left: 3em;
 }
 
+section.patient .patient-container button {
+  padding: .75em;
+  width: 12em;
+  border-radius: 2em;
+  font-size: 1em;
+  font-family: 'poppins';
+  background: var(--three);
+  border: 2px solid var(--three);
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: -12%;
+}
+
+section.patient .patient-container button:hover {
+  background: var(--one);
+  color: var(--three);
+}
+
+
 section.logs {
   position: absolute;
   left: 30%;
