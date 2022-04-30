@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Strokes</title>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+
+    <section class="navbar">
+
+        <img src="images/heart stroke.jpg" alt="">
+
+        <h1>Heart Strokes</h1>
+
+        <div class="nav-links">
+            <li><a class="navlink" href="">Heart Stroke Information</a></li>
+            <li><a class="navlink" id="pat-info"  href="patient.html">Patient Information</a></li>
+            <li><a class="navlink" id="logs"  href="logs.html">Daily Logs & Progress</a></li>
+            <li><a class="navlink"  href="statistics.html">Statistics</a></li>
+            <li><a class="navlink"  href="">Resources</a></li>
+        </div>
+        
+    </section>
+
+    <section class="logs">
+
+        <h1>Daily Logs & Progress</h1>
+
+        <table class="log">
+            <tr>
+                <th>Factors</th>
+                <th>Data</th>
+            </tr>
+
+            <tr>
+                <td class="items">Day of the Week</td>
+                <td class="items-data"><input type="text" id="log-day" name="log-day"></td>
+            </tr>
+
+            <tr>
+                <td class="items">BMI</td>
+                <td class="items-data"><input type="text" id="log-bmi" name="log-bmi"></td>
+            </tr>
+
+            <tr>
+                <td class="items">Weight</td>
+                <td class="items-data"><input type="text" id="log-weight" name="log-weight"></td>
+            </tr>
+
+            <tr>
+                <td class="items">Glucose Level</td>
+                <td class="items-data"><input type="text" id="log-sugar" name="log-sugar"></td>
+            </tr>
+
+            <tr>
+                <td class="items">Exercise Time (Minutes)</td>
+                <td class="items-data"><input type="text" id="log-exercise" name="log-exercise"></td>
+            </tr>
+                
+            <tr>
+                <td class="items">Water Intake (# of Glasses)</td>
+                <td class="items-data"><input type="text" id="log-water" name="log-water"></td>
+            </tr>
+
+        </table>
+
+        <div class="percentages">
+            <div class="initial">
+                <h2>Initial Risk:</h2>
+
+                <span class="initial-bar holder">
+                    <div class="initial-bar bar"></div>
+                    <h5>65%</h5>
+                </span>
+
+            </div>
+
+            <div class="current">
+                <h2>Current Risk:</h2>
+
+                <span class="current-bar holder">
+                    <div class="current-bar bar"></div>
+                    <h5>95%</h5>
+                </span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+</body>
+</html>
