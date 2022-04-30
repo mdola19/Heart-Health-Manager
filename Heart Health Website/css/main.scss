@@ -417,3 +417,59 @@ section.logs {
         font-weight: 400;
     }
 }
+
+.signup-form {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15%;
+    width: 500px;
+    height: 600px;
+    background: var(--three);
+    border-radius: 3em;
+
+    h3 {
+        font-family: 'poppins';
+        margin-top: 1.5em;
+        font-size: 2.5em;
+        color: white;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            margin: -1.5em 0 0.5em 3em;
+            color: white;
+            font-family: 'poppins';
+            font-size: 1em;
+        }
+
+        input {
+            margin: 0 0 2.5em 3.5em;
+            padding: 0.75em;
+            border-radius: 2em;
+            width: 26em;
+            border: none;
+            font-family: 'poppins';
+            font-size: 0.9em;
+        }
+    }
+
+    button {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: .8em;
+        width: 8em;
+        border-radius: 2em;
+        font-size: 1em;
+        font-family: 'poppins';
+        background: white;
+        border: 2px solid white;
+        color: var(--three);
+        font-weight: 400;
+        margin-top: -1em;
+    }
+}
