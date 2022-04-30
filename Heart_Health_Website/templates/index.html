@@ -5,14 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heart Health Website</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 </head>
 <body>
     <section class="hero">
         <div class="text">
             <h1>Heart Health Indicator</h1>
-            <a href="stroke.html"><button>Heart Strokes</button></a>
-            <a href=""><button>Cardiac Arrest</button></a>
         </div>
 
         <div class="blob one"></div>
@@ -24,8 +22,8 @@
     </section>
 
     <div class="signups">
-        <a class="login" href="login.html"><button>Login</button></a>
-        <a class="signup" href="sign_up.html"><button>Sign Up</button></a>
+        <a class="login" href="login"><button>Login</button></a>
+        <a class="signup" href="sign_up"><button>Sign Up</button></a>
     </div>
     
 </body>
