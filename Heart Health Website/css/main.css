@@ -159,6 +159,30 @@ section.hero .five {
   opacity: 0.3;
 }
 
+.signups {
+  position: absolute;
+  right: 2%;
+  top: 2%;
+}
+
+.signups button {
+  padding: .5em;
+  border: 3px solid var(--three);
+  width: 8em;
+  margin-left: 1em;
+  border-radius: 2em;
+  background: var(--three);
+  font-family: 'poppins';
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--one);
+}
+
+.signups button:hover {
+  color: var(--three);
+  background: var(--one);
+}
+
 section.navbar {
   width: 25%;
   height: 105vh;
@@ -364,5 +388,67 @@ section.logs .percentages .holder h5 {
   text-align: center;
   z-index: 800;
   font-family: 'poppins';
+}
+
+.login-form {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 15%;
+  width: 500px;
+  height: 600px;
+  background: var(--three);
+  border-radius: 3em;
+}
+
+.login-form h3 {
+  font-family: 'poppins';
+  margin-top: 3em;
+  font-size: 2.5em;
+  color: white;
+}
+
+.login-form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login-form .form-group label {
+  margin: -.5em 0 0.5em 3em;
+  color: white;
+  font-family: 'poppins';
+  font-size: 1.2em;
+}
+
+.login-form .form-group input {
+  margin: 0 0 1.5em 4.3em;
+  padding: 1em;
+  border-radius: 2em;
+  width: 24em;
+  border: none;
+  font-family: 'poppins';
+  font-size: 0.9em;
+}
+
+.login-form button {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 1em;
+  width: 8em;
+  border-radius: 2em;
+  font-size: 1em;
+  font-family: 'poppins';
+  background: white;
+  border: 2px solid white;
+  color: var(--three);
+  font-weight: 400;
 }
 /*# sourceMappingURL=main.css.map */
