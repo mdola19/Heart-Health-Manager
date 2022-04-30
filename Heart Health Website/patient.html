@@ -5,23 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heart Strokes</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="css/main.css">
 
 </head>
 <body>
 
     <section class="navbar">
 
-        <img src="{{ url_for('static', filename='/images/heart stroke.jpg') }}" alt="">
+        <img src="images/heart stroke.jpg" alt="">
 
         <h1>Heart Strokes</h1>
 
         <div class="nav-links">
             <li><a class="navlink" href="">Heart Stroke Information</a></li>
-            <li><a class="navlink" id="pat-info"  href="patient">Patient Information</a></li>
-            <li><a class="navlink" id="logs"  href="logs">Daily Logs & Progress</a></li>
-            <li><a class="navlink"  href="statistics">Statistics</a></li>
-            <li><a class="navlink"  href="">Resources</a></li>
+            <li><a class="navlink" id="pat-info"  href="patient.html">Patient Information</a></li>
+            <li><a class="navlink" id="logs"  href="logs.html">Daily Logs & Progress</a></li>
+            <li><a class="navlink"  href="statistics.html">Statistics</a></li>
+            <li><a class="navlink"  href="resources.html">Resources</a></li>
         </div>
         
     </section>
@@ -91,6 +91,7 @@
                     
                 </form>
 
+                <button>Submit</button>
 
             </div>
        </div>
