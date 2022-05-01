@@ -17,11 +17,11 @@
         <h1>Heart Strokes</h1>
 
         <div class="nav-links">
+            <br>
             <li><a class="navlink" href="">Heart Stroke Information</a></li>
             <li><a class="navlink" id="pat-info"  href="patient">Patient Information</a></li>
             <li><a class="navlink" id="logs"  href="logs">Daily Logs & Progress</a></li>
             <li><a class="navlink"  href="statistics">Statistics</a></li>
-            <li><a class="navlink"  href="resources">Resources</a></li>
         </div>
         
     </section>
@@ -98,9 +98,9 @@
                 <br>    
                 <h2>  Prediction:  </h2>
                 {%if data == 0%}
-                No Stroke  
+                <h3>No Stroke </h3>
                 {%elif data == 1%}
-                Stroke
+                <h3>Stroke </h3>
                 {%endif%}
                 {%if data == 0 or data == 1%}
                 <br><h2>Confidence: {{ confidence }}%</h2>

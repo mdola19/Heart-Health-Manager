@@ -211,15 +211,16 @@ section.navbar .nav-links {
 }
 
 section.navbar .nav-links li {
-  padding-bottom: 1em;
+  padding-bottom: 4.5em;
 }
 
 section.navbar .nav-links li a {
   text-decoration: none;
   font-family: 'poppins';
-  font-size: 1.1em;
+  font-size: 1.2em;
+  padding:1em 0 0 0em;
   color: #e3dbdb;
-  margin: 2.8em;
+  margin: 2.5em;
 }
 
 section.navbar .nav-links li:hover {
@@ -248,6 +249,20 @@ section.patient .patient-container h1 {
   color: var(--three);
   font-family: 'poppins';
   font-weight: 900;
+}
+
+section.patient .patient-container h2 {
+  font-size: 1.5em;
+  color: white;
+  font-family: 'poppins';
+  font-weight: 800;
+}
+
+section.patient .patient-container h3 {
+  font-size: 1.35em;
+  color: var(--three);
+  font-family: 'poppins';
+  font-weight: 800;
 }
 
 section.patient .patient-container .form-container {
