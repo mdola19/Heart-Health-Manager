@@ -62,7 +62,7 @@ section.hero {
             font-size: 7em;
             color: var(--two);
             padding: 0;
-            margin: 0;
+            margin: .5em 0 0 0;
         }
 
         button {
@@ -132,6 +132,12 @@ section.hero {
         top: -4%;
         opacity: 0.3;
     }
+}
+
+.home {
+    position: absolute;
+    left: 1.5%;
+    top: 2.5%;
 }
 
 .signups {
