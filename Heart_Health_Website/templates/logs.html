@@ -10,6 +10,8 @@
 </head>
 <body>
 
+    <h1 class ="greeting"> Hello {{ firstName }}</h1>
+
     <section class="navbar">
 
         <img src="{{ url_for('static', filename='images/heart stroke.jpg') }}" alt="">
@@ -65,6 +67,7 @@
                 <td class="items">Water Intake (# of Glasses)</td>
                 <td class="items-data"><input type="text" id="log-water" name="log-water"></td>
             </tr>
+
 
         </table>
 

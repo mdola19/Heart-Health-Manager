@@ -7,6 +7,7 @@ import numpy as np
 
 views = Blueprint('views', __name__)
 
+
 @views.route('/')
 def home():
     return render_template("index.html", user=current_user)
@@ -25,6 +26,7 @@ def patient():
     smoking_status = {"Unknown" : 0, "Formerly Smoked":1, "Never Smoked":2, "Smokes" : 3}
     work_type = {"Government Job" : 0, "Never Worked" : 1, "Private" : 2, "Self-Employed" : 3, "Children": 4}
     yes_no = {"No": 0, "Yes": 1}
+    user_first_name = str(current_user.firstName)
     if request.method == "POST":
         print(request.form)
         sex = request.form.get('sex')
@@ -60,21 +62,30 @@ def patient():
         # db.session.add(new_profile)
         # db.session.commit()
         # flash('Patient Information Added!', category='sucess')
+
     
-        return render_template("patient.html", user=current_user, data=pred, confidence = confidence)
-    return render_template("patient.html", user=current_user)
+
+        
+    
+        return render_template("patient.html", user=current_user, data=pred, confidence = confidence, firstName = user_first_name)
+    return render_template("patient.html", user=current_user, firstName = user_first_name)
 
 @views.route('/logs', methods=['GET', 'POST'])
 #@login_required
-def logs():
 
+
+def logs():
+    user_first_name = str(current_user.firstName)
     
 
-    return render_template("logs.html", user=current_user)
+    return render_template("logs.html", user=current_user, firstName = user_first_name)
 
 @views.route('/statistics', methods=['GET', 'POST'])
 #@login_required
 def statistics():
-    return render_template("statistics.html", user=current_user)
+    user_first_name = str(current_user.firstName)
+    
+
+    return render_template("statistics.html", user=current_user, firstName = user_first_name)
 
 

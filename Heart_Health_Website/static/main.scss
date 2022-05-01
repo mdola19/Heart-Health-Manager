@@ -209,6 +209,11 @@ section.patient {
         left: 30%;
         top: 7%;
 
+        .greeting{
+
+            text-align: right;
+        }
+
         h1 {
             font-size: 2em;
             color: var(--three);
