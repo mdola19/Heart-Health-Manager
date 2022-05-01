@@ -12,11 +12,11 @@
 
     <h1 class ="greeting"> Hello {{ firstName }}</h1>
 
-    <a href="index.html"><img class="home" src="images/home.svg" alt=""></a>
+    <a href="index"><img class="home" src="{{ url_for('static', filename='images/home.svg') }}" alt=""></a>
 
     <section class="navbar">
 
-        <img src="{{ url_for('static', filename='images/heart stroke.jpg') }}" alt="">
+        <img src="{{ url_for('static', filename='/images/heart stroke.jpg') }}" alt="">
 
         <h1>Heart Strokes</h1>
 
@@ -83,11 +83,19 @@
                     <h2>Shortness of Breathe</h2>
                     <h4>Difficulty in breathing, person seems exhausted and is having a shortness of breathe.</h4>
                 </div>
+
+                <button id = 'button' class="button">Submit</button>
+
             </div>
 
-            <div class="result-pos">
-                <img src="images/x.png" alt="">
+            <div class="result pos">
+                <img src="{{ url_for('static', filename='images/x.png') }}" alt="">
                 <h2>CALL 911 IMMEDIATELY</h2>
+            </div>
+
+            <div class="result neg">
+                <img src="{{ url_for('static', filename='images/check.png') }}" alt="">
+                <h2>You are not having a stroke but please monitor closely.</h2>
             </div>
 
         </div>
@@ -110,69 +118,63 @@
             document.querySelector('.six').style.background = 'white';
             num_of_symptoms = 0
             document.querySelector('.questionnaire').style.display = 'block';
-            document.querySelector('.result-pos').style.display = 'none';
+            document.querySelector('.pos').style.display = 'none';
+            document.querySelector('.neg').style.display = 'none';
         });
 
         document.getElementById('one').addEventListener('click', function(){
             document.querySelector('.one').style.background = 'rgb(211, 208, 208)';
             num_of_symptoms++;
-            if (num_of_symptoms >= 2) {
-                document.querySelector('.questionnaire').style.display = 'none';
-                document.querySelector('.result-pos').style.display = 'block';
-            }
+            
         });
 
         document.getElementById('two').addEventListener('click', function(){
             document.querySelector('.two').style.background = 'rgb(211, 208, 208)';
             num_of_symptoms++;
-            if (num_of_symptoms >= 2) {
-                document.querySelector('.questionnaire').style.display = 'none';
-                document.querySelector('.result-pos').style.display = 'block';
-            }
+            
         });
 
         document.getElementById('three').addEventListener('click', function(){
             document.querySelector('.three').style.background = 'rgb(211, 208, 208)';
             num_of_symptoms++;
-            if (num_of_symptoms >= 2) {
-                document.querySelector('.questionnaire').style.display = 'none';
-                document.querySelector('.result-pos').style.display = 'block';
-            }
+            
         });
 
         document.getElementById('four').addEventListener('click', function(){
             document.querySelector('.four').style.background = 'rgb(211, 208, 208)';
             num_of_symptoms++;   
-            if (num_of_symptoms >= 2) {
-                document.querySelector('.questionnaire').style.display = 'none';
-                document.querySelector('.result-pos').style.display = 'block';
-            }     
+                
         });
 
         document.getElementById('four').addEventListener('click', function(){
             document.querySelector('.four').style.background = 'rgb(211, 208, 208)';
             num_of_symptoms++;     
-            if (num_of_symptoms >= 2) {
-                document.querySelector('.questionnaire').style.display = 'none';
-                document.querySelector('.result-pos').style.display = 'block';
-            }   
+               
         });
 
         document.getElementById('five').addEventListener('click', function(){
             document.querySelector('.five').style.background = 'rgb(211, 208, 208)';
             num_of_symptoms++;  
-            if (num_of_symptoms >= 2) {
-                document.querySelector('.questionnaire').style.display = 'none';
-                document.querySelector('.result-pos').style.display = 'block';
-            }      
+                
         });
 
         document.getElementById('six').addEventListener('click', function(){
             document.querySelector('.six').style.background = 'rgb(211, 208, 208)';
             num_of_symptoms++;
+            
+        }); 
+
+        document.getElementById('button').addEventListener('click', function(){
             if (num_of_symptoms >= 2) {
-                document.querySelector('.questionnaire').style.display = 'none';
-                document.querySelector('.result-pos').style.display = 'block';
+                document.querySelector('.questionnaire').style.display ='none';
+                document.querySelector('.pos').style.display ='block';
+                num_of_symptoms = 0
+            }
+            
+            else if (num_of_symptoms < 2) {
+                document.querySelector('.questionnaire').style.display ='none';
+                document.querySelector('.neg').style.display ='block';
+                num_of_symptoms = 0
             }
         }); 
 

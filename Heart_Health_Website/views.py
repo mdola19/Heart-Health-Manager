@@ -9,8 +9,10 @@ views = Blueprint('views', __name__)
 
 
 @views.route('/')
+@views.route('/index')
 def home():
     return render_template("index.html", user=current_user)
+
 
     
 strokemodel = pickle.load(open('Heart_Health_Website/Machine Learning Model\StrokeModel.pickle', 'rb'))
