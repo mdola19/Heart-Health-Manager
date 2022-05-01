@@ -78,7 +78,7 @@
 
                 <span class="initial-bar holder">
                     <div class="initial-bar bar"></div>
-                    <h5>65%</h5>
+                    <h5>{{ user.profiles[0].percentage }}%</h5>
                 </span>
 
             </div>
@@ -88,7 +88,8 @@
 
                 <span class="current-bar holder">
                     <div class="current-bar bar"></div>
-                    <h5>95%</h5>
+
+                    <h5>{{ user.profiles[-1].percentage }}%</h5>
                 </span>
             </div>
 
