@@ -12,7 +12,7 @@
 
     <section class="navbar">
 
-        <img src="images/heart stroke.jpg" alt="">
+        <img src="{{ url_for('static', filename='/images/heart stroke.jpg') }}" alt="">
 
         <h1>Heart Strokes</h1>
 
@@ -91,6 +91,16 @@
                     <button>Submit</button>
                 </form>
 
+                <br>    
+                <h2>  Prediction:  </h2>
+                {%if data == 0%}
+                No Stroke  
+                {%elif data == 1%}
+                Stroke
+                {%endif%}
+                {%if data == 0 or data == 1%}
+                <br><h2>Confidence: {{ confidence }}%</h2>
+                {%endif%}    
                 
 
             </div>
