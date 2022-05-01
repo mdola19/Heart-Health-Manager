@@ -12,12 +12,11 @@
 
     <section class="navbar">
 
-        <img src="{{ url_for('static', filename='/images/heart stroke.jpg') }}" alt="">
+        <img src="{{ url_for('static', filename='images/heart stroke.jpg') }}" alt="">
 
         <h1>Heart Strokes</h1>
 
         <div class="nav-links">
-            <br>
             <li><a class="navlink" href="stroke">Heart Stroke Information</a></li>
             <li><a class="navlink" id="pat-info"  href="patient">Patient Information</a></li>
             <li><a class="navlink" id="logs"  href="logs">Daily Logs & Progress</a></li>
@@ -26,13 +25,9 @@
         
     </section>
 
-    <h1 class ="greeting"> Hello {{ firstName }}</h1>
-
     <section class="patient">
         
-
        <div class="patient-container">
-            
             <h1>Patient Information</h1>
             
             <div class="form-container">
@@ -51,7 +46,7 @@
                         </li>
 
                         <li>
-                            <label for="name">Work Type:</label>
+                            <label for="name">Work Type (Government Job, Never Worked, Private, Children, Self-Employed):</label>
                             <input type="text" id="work" name="work">
                         </li>
                         
@@ -61,7 +56,7 @@
                         </li>
         
                         <li>
-                            <label for="name">Urban or Rural:</label>
+                            <label for="name">Residence (Urban or Rural):</label>
                             <input type="text" id="urban" name="urban">
                         </li>
                     </div>
@@ -83,7 +78,7 @@
                         </li>
         
                         <li>
-                            <label for="name">Smoking (Yes or No)</label>
+                            <label for="name">Smoking (Government Job, Never Worked, Private, Children, Self-Employed)</label>
                             <input type="text" id="smoke" name="smoke">
                         </li>
         
@@ -98,9 +93,9 @@
                 <br>    
                 <h2>  Prediction:  </h2>
                 {%if data == 0%}
-                <h3>No Stroke </h3>
+                No Stroke  
                 {%elif data == 1%}
-                <h3>Stroke </h3>
+                Stroke
                 {%endif%}
                 {%if data == 0 or data == 1%}
                 <br><h2>Confidence: {{ confidence }}%</h2>
