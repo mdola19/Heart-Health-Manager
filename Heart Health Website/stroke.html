@@ -17,14 +17,161 @@
         <h1>Heart Strokes</h1>
 
         <div class="nav-links">
-            <li><a class="navlink" href="">Heart Stroke Information</a></li>
+            <li><a class="navlink" href="stroke.html">Heart Stroke Information</a></li>
             <li><a class="navlink" id="pat-info"  href="patient.html">Patient Information</a></li>
             <li><a class="navlink" id="logs"  href="logs.html">Daily Logs & Progress</a></li>
             <li><a class="navlink"  href="statistics.html">Statistics</a></li>
-            <li><a class="navlink"  href="resources.html">Resources</a></li>
         </div>
         
     </section>
+
+    <section class="resources">
+        <h1>Heart Stroke Information</h1>
+
+        <h3>Do you think you or someone around you is experiencing a Heart Stroke? Click the button below to confirm and access the appropriate treatment.</h3>
+
+        <button id="test">Heart Stroke Test</button>
+
+        <h4>Visit these Websites for more Information</h4>
+
+        <h3><a href="https://www.heartandstroke.ca/stroke/what-is-stroke">Heart and Stroke Foundation of Canada</a></h3>
+        <h3><a href="https://www.healthline.com/health/stroke">Heartline</a></h3>
+        <h3><a href="https://www.stroke.org/en/about-stroke">Stroke.org</a></h3>
+        <h3><a href="https://www.cdc.gov/stroke/about.htm#:~:text=A%20stroke%2C%20sometimes%20called%20a,term%20disability%2C%20or%20even%20death">Centers for Disease Control & Prevention</a></h3>
+    </section>
+
+    <div class="test">
+        <div id = "exit" class="bg-tint"></div>
+        <div id = "popup" class="popup">
+            
+            <div class="questionnaire">
+                <h1>Heart Stroke Test</h1>
+
+                <h3>Please select the symptoms you or someone around you is experiencing:</h3>
+
+                <div id = "one" class="symptom one">
+                    <h2>Balance</h2>
+                    <h4>The person is experiencing dizziness and/or is unable to balance themselves</h4>
+                </div>
+
+                <div id = "two" class="symptom two">
+                    <h2>Eyes</h2>
+                    <h4>Cannot see in one or both of their eyes.</h4>
+                </div>
+
+                <div id = "three" class="symptom three">
+                    <h2>Face</h2>
+                    <h4>Face appears to be uneven.</h4>
+                </div>
+
+                <div  id = "four" class="symptom four">
+                    <h2>Arms</h2>
+                    <h4>Arms are weak/numb, person is unable to lift their arm(s).</h4>
+                </div>
+
+                <div id = "five" class="symptom five">
+                    <h2>Speech</h2>
+                    <h4>Person's speech is slurred, they are having trouble speaking, seem confused.</h4>
+                </div>
+
+                <div id="six" class="symptom six">
+                    <h2>Shortness of Breathe</h2>
+                    <h4>Difficulty in breathing, person seems exhausted and is having a shortness of breathe.</h4>
+                </div>
+            </div>
+
+            <div class="result-pos">
+                <img src="images/x.png" alt="">
+                <h2>CALL 911 IMMEDIATELY</h2>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('test').addEventListener('click', function(){
+            document.querySelector('.test').style.display = 'block';
+        });
+
+        var num_of_symptoms = 0
+
+        document.getElementById('exit').addEventListener('click', function(){
+            document.querySelector('.test').style.display = 'none';
+            document.querySelector('.one').style.background = 'white';
+            document.querySelector('.two').style.background = 'white';
+            document.querySelector('.three').style.background = 'white';
+            document.querySelector('.four').style.background = 'white';
+            document.querySelector('.five').style.background = 'white';
+            document.querySelector('.six').style.background = 'white';
+            num_of_symptoms = 0
+            document.querySelector('.questionnaire').style.display = 'block';
+            document.querySelector('.result-pos').style.display = 'none';
+        });
+
+        document.getElementById('one').addEventListener('click', function(){
+            document.querySelector('.one').style.background = 'rgb(211, 208, 208)';
+            num_of_symptoms++;
+            if (num_of_symptoms >= 2) {
+                document.querySelector('.questionnaire').style.display = 'none';
+                document.querySelector('.result-pos').style.display = 'block';
+            }
+        });
+
+        document.getElementById('two').addEventListener('click', function(){
+            document.querySelector('.two').style.background = 'rgb(211, 208, 208)';
+            num_of_symptoms++;
+            if (num_of_symptoms >= 2) {
+                document.querySelector('.questionnaire').style.display = 'none';
+                document.querySelector('.result-pos').style.display = 'block';
+            }
+        });
+
+        document.getElementById('three').addEventListener('click', function(){
+            document.querySelector('.three').style.background = 'rgb(211, 208, 208)';
+            num_of_symptoms++;
+            if (num_of_symptoms >= 2) {
+                document.querySelector('.questionnaire').style.display = 'none';
+                document.querySelector('.result-pos').style.display = 'block';
+            }
+        });
+
+        document.getElementById('four').addEventListener('click', function(){
+            document.querySelector('.four').style.background = 'rgb(211, 208, 208)';
+            num_of_symptoms++;   
+            if (num_of_symptoms >= 2) {
+                document.querySelector('.questionnaire').style.display = 'none';
+                document.querySelector('.result-pos').style.display = 'block';
+            }     
+        });
+
+        document.getElementById('four').addEventListener('click', function(){
+            document.querySelector('.four').style.background = 'rgb(211, 208, 208)';
+            num_of_symptoms++;     
+            if (num_of_symptoms >= 2) {
+                document.querySelector('.questionnaire').style.display = 'none';
+                document.querySelector('.result-pos').style.display = 'block';
+            }   
+        });
+
+        document.getElementById('five').addEventListener('click', function(){
+            document.querySelector('.five').style.background = 'rgb(211, 208, 208)';
+            num_of_symptoms++;  
+            if (num_of_symptoms >= 2) {
+                document.querySelector('.questionnaire').style.display = 'none';
+                document.querySelector('.result-pos').style.display = 'block';
+            }      
+        });
+
+        document.getElementById('six').addEventListener('click', function(){
+            document.querySelector('.six').style.background = 'rgb(211, 208, 208)';
+            num_of_symptoms++;
+            if (num_of_symptoms >= 2) {
+                document.querySelector('.questionnaire').style.display = 'none';
+                document.querySelector('.result-pos').style.display = 'block';
+            }
+        }); 
+
+    </script>
 
 
 </body>
