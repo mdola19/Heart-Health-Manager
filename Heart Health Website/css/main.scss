@@ -39,7 +39,7 @@
 
 body {
     margin: 0;
-    //overflow:  hidden;
+    overflow:  hidden;
     background: var(--one);
 }
 
@@ -567,10 +567,10 @@ section.resources {
 
     .popup {
         width: 825px;
-        height: 650px;
+        height: 675px;
         position: absolute;
         left: 20%;
-        top: 10%;
+        top: 9%;
         background: white;
         z-index: 999;
         border-radius: 3em;
@@ -619,7 +619,28 @@ section.resources {
             }
         }
 
-        .result-pos {
+        button {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 2%;
+            padding: 0.75em;
+            width: 8em;
+            border-radius: 2em;
+            font-size: 1em;
+            font-family: 'poppins';
+            background: var(--three);
+            border: 2px solid var(--three);
+            color: white;
+            font-weight: 400;
+
+            &:hover {
+                background: white;
+                color: var(--three);
+            }
+        }
+
+        .result {
             display: none;
 
             img {
@@ -638,6 +659,21 @@ section.resources {
                 font-family: 'poppins';
                 font-size: 2em;
                 color: red;
+            }
+        }
+
+        .neg {
+
+            img {
+                width: 28em;
+                margin-top: 4em;
+            }
+
+            h2 {
+                text-align: center;
+                font-size: 1.4em;
+                color: rgb(1, 132, 38);
+                margin-top: 2em;
             }
         }
     }
