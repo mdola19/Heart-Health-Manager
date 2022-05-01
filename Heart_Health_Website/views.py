@@ -38,16 +38,6 @@ def patient():
         smoke = request.form.get('smoke')
         disease = request.form.get('disease')
 
-        #model
-
-        percentage = 0
-
-        new_profile = Profile(gender = sex, age = age, hypertension = hypertension, heart_disease = disease, married = married, work_type = work, 
-                              residence_type = residence, avg_glucose_level = glucose, bmi = bmi, smoking_status = smoke, percentage = percentage, user_id = current_user.id)
-
-        db.session.add(new_profile)
-        db.session.commit()
-        flash('Patient Information Added!', category='sucess')
 
         arr = np.array([sex, age, hypertension, disease, married, work, urban, glucose, bmi, smoke])
         arr[0] = gender[arr[0]]
@@ -64,6 +54,12 @@ def patient():
         confidence = probs.flatten()[idx]
         confidence = round(confidence, 2)
         confidence *= 100
+        # new_profile = Profile(gender = sex, age = age, hypertension = hypertension, heart_disease = disease, married = married, work_type = work, 
+        #                       residence_type = residence, avg_glucose_level = glucose, bmi = bmi, smoking_status = smoke, percentage = confidence, user_id = current_user.id)
+
+        # db.session.add(new_profile)
+        # db.session.commit()
+        # flash('Patient Information Added!', category='sucess')
     
         return render_template("patient.html", user=current_user, data=pred, confidence = confidence)
     return render_template("patient.html", user=current_user)

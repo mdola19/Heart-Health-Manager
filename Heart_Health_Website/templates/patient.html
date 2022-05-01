@@ -12,8 +12,7 @@
 
     <section class="navbar">
 
-        <img src="{{ url_for('static', filename='images/heart stroke.jpg') }}" alt="">
-
+        <img src="{{ url_for('static', filename='/images/heart stroke.jpg') }}" alt="">
 
         <h1>Heart Strokes</h1>
 
@@ -22,9 +21,8 @@
             <li><a class="navlink" id="pat-info"  href="patient">Patient Information</a></li>
             <li><a class="navlink" id="logs"  href="logs">Daily Logs & Progress</a></li>
             <li><a class="navlink"  href="statistics">Statistics</a></li>
-            <li><a class="navlink"  href="">Resources</a></li>
+            <li><a class="navlink"  href="resources">Resources</a></li>
         </div>
-        
         
     </section>
 
@@ -90,8 +88,10 @@
                             <input type="text" id="disease" name="disease">
                         </li>
                     </div>
-                    <input type="submit" value="submit">
+                    <button>Submit</button>
                 </form>
+
+                <br>    
                 <h2>  Prediction:  </h2>
                 {%if data == 0%}
                 No Stroke  
@@ -100,8 +100,8 @@
                 {%endif%}
                 {%if data == 0 or data == 1%}
                 <br><h2>Confidence: {{ confidence }}%</h2>
-                {%endif%}
-
+                {%endif%}    
+                
 
             </div>
        </div>
