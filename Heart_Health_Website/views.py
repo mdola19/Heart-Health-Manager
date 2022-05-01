@@ -30,12 +30,12 @@ def patient():
         smoke = request.form.get('smoke')
         disease = request.form.get('disease')
 
-        #model
+        #model integration
 
         percentage = 0
 
         new_profile = Profile(gender = sex, age = age, hypertension = hypertension, heart_disease = disease, married = married, work_type = work, 
-                              residence_type = residence, avg_glucose_level = glucose, bmi = bmi, smoking_status = smoke, percentage = percentage, user_id = current_user.id)
+                              residence_type = residence, avg_glucose_level = glucose, bmi = bmi, smoking_status = smoke, percentage=0, user_id = current_user.id)
 
         db.session.add(new_profile)
         db.session.commit()
@@ -47,6 +47,9 @@ def patient():
 @views.route('/logs', methods=['GET', 'POST'])
 #@login_required
 def logs():
+
+    
+
     return render_template("logs.html", user=current_user)
 
 @views.route('/statistics', methods=['GET', 'POST'])

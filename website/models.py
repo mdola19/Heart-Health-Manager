@@ -14,7 +14,7 @@ class Profile(db.Model):
     avg_glucose_level = db.Column(db.Float)
     bmi = db.Column(db.Float)
     smoking_status = db.Column(db.String(100))
-    date = db.Column(db.DateTime(timezone=True), default=func.now())
+    percentage = db.Column(db.Integer)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
 class User(db.Model, UserMixin):
