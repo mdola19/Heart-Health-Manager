@@ -62,7 +62,6 @@
 
 body {
   margin: 0;
-  overflow: hidden;
   background: var(--one);
 }
 
@@ -88,7 +87,7 @@ section.hero .text h1 {
   font-size: 7em;
   color: var(--two);
   padding: 0;
-  margin: 0;
+  margin: .5em 0 0 0;
 }
 
 section.hero .text button {
@@ -159,6 +158,12 @@ section.hero .five {
   opacity: 0.3;
 }
 
+.home {
+  position: absolute;
+  left: 1.5%;
+  top: 2.5%;
+}
+
 .signups {
   position: absolute;
   right: 2%;
@@ -227,12 +232,6 @@ section.navbar .nav-links li:hover {
   font-weight: 800;
 }
 
-section.patient .patient-container {
-  position: absolute;
-  left: 30%;
-  top: 7%;
-}
-
 body .greeting {
   position: absolute;
   right: 2%;
@@ -241,6 +240,13 @@ body .greeting {
   font-family: 'poppins';
   font-size: 1.3em;
   font-weight: 400;
+}
+
+
+section.patient .patient-container {
+  position: absolute;
+  left: 30%;
+  top: 7%;
 }
 
 
@@ -268,7 +274,7 @@ section.patient .patient-container h3 {
 section.patient .patient-container .form-container {
   color: white;
   margin-left: -1em;
-} 
+}
 
 section.patient .patient-container .form-container .form {
   display: -webkit-box;
@@ -324,7 +330,6 @@ section.patient .patient-container button:hover {
   background: var(--one);
   color: var(--three);
 }
-
 
 section.logs {
   position: absolute;
@@ -402,6 +407,7 @@ section.logs .percentages .holder {
 
 section.logs .percentages .holder .bar {
   background-image: linear-gradient(45deg, green 20%, yellow 60%, red 80%);
+  opacity: 0.7;
   display: inline-block;
   padding: 1em;
   border-radius: 10px;
@@ -413,9 +419,6 @@ section.logs .percentages .holder .bar {
   margin-top: -.58em;
   margin-bottom: 2em;
   z-index: 799;
-}
-
-section.logs .percentages .holder .bar:hover {
   -webkit-animation: load 2s 0s;
           animation: load 2s 0s;
 }
@@ -562,5 +565,150 @@ section.logs .percentages .holder h5 {
   color: var(--three);
   font-weight: 400;
   margin-top: -1em;
+}
+
+section.resources {
+  position: absolute;
+  left: 30%;
+  top: 7%;
+}
+
+section.resources h1 {
+  font-size: 2em;
+  color: var(--three);
+  font-family: 'poppins';
+  font-weight: 900;
+}
+
+section.resources h3 {
+  color: white;
+  font-family: 'poppins';
+  font-size: 1.1em;
+  font-weight: 200;
+}
+
+section.resources button {
+  padding: 1em;
+  width: 14em;
+  border-radius: 2em;
+  font-size: 1em;
+  font-family: 'poppins';
+  background: var(--three);
+  border: 2px solid var(--three);
+  color: white;
+  font-weight: 800;
+  margin-top: 1em;
+}
+
+section.resources button:hover {
+  background: var(--one);
+  color: var(--three);
+}
+
+section.resources h4 {
+  color: white;
+  font-family: 'poppins';
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+section.resources a {
+  font-size: 1.1em;
+  color: white;
+  text-decoration: none;
+}
+
+.test {
+  display: none;
+}
+
+.test .bg-tint {
+  background: var(--one);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  opacity: 0.8;
+  z-index: 200;
+}
+
+.test .popup {
+  width: 825px;
+  height: 650px;
+  position: absolute;
+  left: 20%;
+  top: 10%;
+  background: white;
+  z-index: 999;
+  border-radius: 3em;
+}
+
+.test .popup h1 {
+  text-align: center;
+  color: var(--three);
+  font-family: 'poppins';
+  font-size: 2em;
+  margin-top: 1em;
+}
+
+.test .popup .questionnaire {
+  display: block;
+}
+
+.test .popup .questionnaire h3 {
+  font-family: 'poppins';
+  font-size: 1.1em;
+  color: var(--one);
+  font-weight: 400;
+  margin-left: 2em;
+}
+
+.test .popup .questionnaire .symptom {
+  margin-left: 2em;
+  width: 90%;
+}
+
+.test .popup .questionnaire .symptom h2 {
+  color: var(--three);
+  font-size: 1.2em;
+  font-family: 'poppins';
+  margin-top: 0em;
+}
+
+.test .popup .questionnaire .symptom h4 {
+  color: var(--one);
+  font-family: 'poppins';
+  font-size: 0.9em;
+  font-weight: 400;
+  margin-top: -.5em;
+}
+
+.test .popup .questionnaire .symptom:hover {
+  background: #d3d0d0;
+}
+
+.test .popup .result-pos {
+  display: none;
+}
+
+.test .popup .result-pos img {
+  width: 35em;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.test .popup .result-pos h2 {
+  position: absolute;
+  left: 50%;
+  top: 76%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-family: 'poppins';
+  font-size: 2em;
+  color: red;
 }
 /*# sourceMappingURL=main.css.map */

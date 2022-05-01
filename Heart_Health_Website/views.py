@@ -12,10 +12,6 @@ views = Blueprint('views', __name__)
 def home():
     return render_template("index.html", user=current_user)
 
-@views.route('/stroke', methods=['GET', 'POST'])
-#@login_required
-def stroke():
-    return render_template("stroke.html", user=current_user)
     
 strokemodel = pickle.load(open('Heart_Health_Website/Machine Learning Model\StrokeModel.pickle', 'rb'))
 @views.route('/patient', methods=['GET', 'POST'])
@@ -88,4 +84,9 @@ def statistics():
 
     return render_template("statistics.html", user=current_user, firstName = user_first_name)
 
+@views.route('/stroke', methods=['GET', 'POST'])
+def stroke():
+    user_first_name = str(current_user.firstName)
 
+
+    return render_template("stroke.html", firstName = user_first_name)
