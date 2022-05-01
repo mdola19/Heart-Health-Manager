@@ -2,6 +2,8 @@ from flask import Blueprint, render_template, request, flash
 from flask_login import login_required, current_user
 from .models import Profile
 from . import db
+import pickle
+import numpy as np
 
 views = Blueprint('views', __name__)
 
@@ -13,17 +15,23 @@ def home():
 #@login_required
 def stroke():
     return render_template("stroke.html", user=current_user)
-
+    
+strokemodel = pickle.load(open('Heart_Health_Website/Machine Learning Model\StrokeModel.pickle', 'rb'))
 @views.route('/patient', methods=['GET', 'POST'])
 #@login_required
 def patient():
+    gender = {"Male": 1, "Female" : 0}
+    residence = {"Urban" : 1, "Rural": 0}
+    smoking_status = {"Unknown" : 0, "Formerly Smoked":1, "Never Smoked":2, "Smokes" : 3}
+    work_type = {"Government Job" : 0, "Never Worked" : 1, "Private" : 2, "Self-Employed" : 3, "Children": 4}
+    yes_no = {"No": 0, "Yes": 1}
     if request.method == "POST":
         print(request.form)
         sex = request.form.get('sex')
         age = request.form.get('age')
         work = request.form.get('work')
-        married = request.form.get('married')
-        residence = request.form.get('urban')
+        married = request.form.get('married') 
+        urban = request.form.get('urban')
         bmi = request.form.get('bmi')
         hypertension = request.form.get('hyper')
         glucose = request.form.get('glucose')
@@ -41,8 +49,24 @@ def patient():
         db.session.commit()
         flash('Patient Information Added!', category='sucess')
 
+        arr = np.array([sex, age, hypertension, disease, married, work, urban, glucose, bmi, smoke])
+        arr[0] = gender[arr[0]]
+        arr[2] = yes_no[arr[2]]
+        arr[3] = yes_no[arr[3]]
+        arr[4] = yes_no[arr[4]]
+        arr[5] = work_type[arr[5]]
+        arr[6] = residence[arr[6]]
+        arr[9] = smoking_status[arr[9]]
+        arr = np.expand_dims(arr, axis=0)
+        pred = strokemodel.predict(arr)
+        probs = strokemodel.predict_proba(arr)
+        idx = np.argmax(probs)
+        confidence = probs.flatten()[idx]
+        confidence = round(confidence, 2)
+        confidence *= 100
+    
+        return render_template("patient.html", user=current_user, data=pred, confidence = confidence)
     return render_template("patient.html", user=current_user)
-
 
 @views.route('/logs', methods=['GET', 'POST'])
 #@login_required
