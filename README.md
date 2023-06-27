@@ -1,4 +1,4 @@
-# Heart Stroke Manager
+# Heart Health Manager
 ## Hackathon project for Hack::Peel 2022
 According to the [World Health Organization](https://www.who.int/news-room/fact-sheets/detail/the-top-10-causes-of-death) cardiovascular disease is the world's leading cause of death. More specifically, strokes are the 2nd leading cause of death globally. We wanted to create a project that helps tackle this issue. As a result, we created a web-app that uses Machine Learning to lower the risk of getting a stroke.
 
